@@ -1,4 +1,5 @@
-?label must be numeric and have ten digits!: ?label måste vara numeriskt och tio tecken långt!
+?label must be numeric!: ?label måste vara numeriskt!
+?label must be numeric and have ?digits digits!: ?label måste vara numeriskt och ?digits tecken långt!
 ?label is not an integer!: ?label är inte ett heltal!
 ?label can not be less then ?min!: ?label kan inte vara mindre än ?min!
 ?label can not be greater then ?max!: ?label kan inte vara högre än ?max!

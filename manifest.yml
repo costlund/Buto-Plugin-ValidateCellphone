@@ -1,5 +1,9 @@
-version: 1.1.0
+version: 1.2.0
 history:
+  1.2.0:
+    date: '2021-06-39'
+    title: Number
+    description: 'Validate length of number depending on country code.'
   1.1.0:
     date: '2021-04-26'
     title: Validation

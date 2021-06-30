@@ -21,3 +21,12 @@ items:
         plugin: validate/cellphone
         method: validate_country_code
 ```
+
+## Validate cellphone
+Optional param country_code_param to validate length of number depending on country code.
+```
+plugin: validate/cellphone
+method: validate_cellphone
+data:
+  country_code_param: country
+```
