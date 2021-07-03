@@ -18,7 +18,9 @@ class PluginValidateCellphone{
        */
       $digits = null;
       if($data->get('country_code_param')){
-        $digits = $this->country_digits->get(wfRequest::get($data->get('country_code_param')));
+        if(wfRequest::get($data->get('country_code_param'))){
+          $digits = $this->country_digits->get(wfRequest::get($data->get('country_code_param')));
+        }
         if($digits && strlen($form->get("items/$field/post_value")) != $digits){
           $error = true;
         }
