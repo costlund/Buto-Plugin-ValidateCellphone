@@ -1,5 +1,9 @@
-version: 1.2.1
+version: 1.2.2
 history:
+  1.2.2:
+    date: '2023-01-02'
+    title: Versions
+    description: 'Versions update.'
   1.2.1:
     date: '2022-09-08'
     title: Versions
@@ -23,7 +27,7 @@ history:
 plugin:
   -
     name: i18n/translate_v1
-    version: 1.9.0
+    version: 1.10.0
   -
     name: wf/array
     version: 1.2.4
