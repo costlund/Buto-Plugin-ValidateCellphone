@@ -11,7 +11,7 @@ class PluginValidateCellphone{
   public function validate_cellphone($field, $form, $data = array()){
     $form = new PluginWfArray($form);
     $data = new PluginWfArray($data);
-    if($form->get("items/$field/is_valid") && strlen($form->get("items/$field/post_value"))){
+    if($form->get("items/$field/is_valid") && wfPhpfunc::strlen($form->get("items/$field/post_value"))){
       $error = false;
       /**
        * Length.
@@ -21,7 +21,7 @@ class PluginValidateCellphone{
         if(wfRequest::get($data->get('country_code_param'))){
           $digits = $this->country_digits->get(wfRequest::get($data->get('country_code_param')));
         }
-        if($digits && strlen($form->get("items/$field/post_value")) != $digits){
+        if($digits && wfPhpfunc::strlen($form->get("items/$field/post_value")) != $digits){
           $error = true;
         }
       }
@@ -43,7 +43,7 @@ class PluginValidateCellphone{
     return $form->get();
   }
   public function validate_country_code($field, $form, $data = array()){
-    if(wfArray::get($form, "items/$field/is_valid") && strlen(wfArray::get($form, "items/$field/post_value"))){
+    if(wfArray::get($form, "items/$field/is_valid") && wfPhpfunc::strlen(wfArray::get($form, "items/$field/post_value"))){
       wfPlugin::includeonce('wf/array');
       $data = new PluginWfArray($data);
       $min = 10;
@@ -62,7 +62,7 @@ class PluginValidateCellphone{
     return $form;   
   }
   public function is_integer($num){
-    if(preg_match('/^\d+$/',str_replace('-', '', $num))){
+    if(preg_match('/^\d+$/',wfPhpfunc::str_replace('-', '', $num))){
       return true;
     }else{
       return false;
